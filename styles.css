@@ -218,22 +218,22 @@ p { color: var(--text-secondary); }
   font-size: 15px;
 }
 
-/* ── Nav ────────────────────────────────────────────────────────────── */
+/* ── Nav · oxblood ──────────────────────────────────────────────────── */
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 16px 0;
-  transition: background var(--transition), border-color var(--transition);
+  background: #6B1A1A;
+  transition: background var(--transition), box-shadow var(--transition);
 }
 
 .nav.scrolled {
-  background: rgba(8,9,13,0.92);
+  background: rgba(107,26,26,0.97);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.45);
 }
 
 .nav__inner {
@@ -241,30 +241,30 @@ p { color: var(--text-secondary); }
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  height: 64px;
 }
 
 .nav__logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-primary);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-.nav__logo-mark {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, var(--teal) 0%, #3b82f6 100%);
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 800;
-  color: #000;
-  flex-shrink: 0;
+/* Fraunces wordmark */
+.va-wordmark {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #FAF6EC;
+  font-variation-settings: "opsz" 144;
+}
+.va-wordmark em {
+  font-style: italic;
+  font-weight: 500;
 }
 
 .nav__links {
@@ -275,20 +275,24 @@ p { color: var(--text-secondary); }
 }
 
 .nav__links a {
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 500;
-  color: var(--text-secondary);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250,246,236,0.7);
+  text-decoration: none;
   transition: color var(--transition);
 }
 
-.nav__links a:hover { color: var(--text-primary); }
+.nav__links a:hover { color: #FAF6EC; }
 
 .lang-toggle {
   display: flex;
   align-items: center;
   gap: 3px;
   background: none;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(250,246,236,0.22);
   border-radius: var(--radius);
   padding: 6px 11px;
   cursor: pointer;
@@ -296,19 +300,29 @@ p { color: var(--text-secondary); }
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--text-muted);
+  color: rgba(250,246,236,0.5);
   transition: border-color var(--transition), color var(--transition);
   white-space: nowrap;
 }
-.lang-toggle:hover { border-color: var(--teal-dim); color: var(--text-secondary); }
+.lang-toggle:hover { border-color: rgba(250,246,236,0.5); color: rgba(250,246,236,0.85); }
 .lang-toggle__option { transition: color var(--transition); }
-.lang-toggle__option.active { color: var(--teal); }
-.lang-toggle__sep { color: var(--border); margin: 0 1px; }
+.lang-toggle__option.active { color: #FAF6EC; }
+.lang-toggle__sep { color: rgba(250,246,236,0.22); margin: 0 1px; }
 
 .nav__actions {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* Override btn--outline for oxblood nav */
+.nav .btn--outline {
+  border-color: rgba(250,246,236,0.4);
+  color: #FAF6EC;
+}
+.nav .btn--outline:hover {
+  background: rgba(250,246,236,0.1);
+  border-color: #FAF6EC;
 }
 
 /* Mobile nav toggle */
@@ -326,7 +340,7 @@ p { color: var(--text-secondary); }
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--text-secondary);
+  background: rgba(250,246,236,0.75);
   border-radius: 2px;
   transition: all var(--transition);
 }
@@ -1352,8 +1366,8 @@ p { color: var(--text-secondary); }
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(8,9,13,0.98);
-    border-bottom: 1px solid var(--border);
+    background: rgba(107,26,26,0.98);
+    border-bottom: 1px solid rgba(250,246,236,0.12);
     padding: 24px;
     gap: 20px;
   }

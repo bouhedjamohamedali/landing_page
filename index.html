@@ -11,10 +11,32 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<!-- VA Mark — SVG symbols used by logo instances throughout the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Duo: oxblood V (background depth) + ink A (foreground) — used on oxblood nav -->
+    <symbol id="va-duo" viewBox="0 0 240 240">
+      <path d="M22 36 L120 224 L218 36 L182 36 L120 156 L58 36 Z" fill="#6B1A1A" opacity="0.85"/>
+      <path d="M48 220 L120 36 L192 220 L156 220 L141 178 L99 178 L84 220 Z M111 142 L120 110 L129 142 Z" fill="#1A1614" fill-rule="evenodd"/>
+      <rect x="91" y="156" width="58" height="8" fill="#1A1614"/>
+      <rect x="42" y="220" width="48" height="6" fill="#1A1614"/>
+      <rect x="150" y="220" width="48" height="6" fill="#1A1614"/>
+    </symbol>
+    <!-- On dark: oxblood V layer + paper A — used on dark backgrounds (footer) -->
+    <symbol id="va-dark" viewBox="0 0 240 240">
+      <path d="M22 36 L120 224 L218 36 L182 36 L120 156 L58 36 Z" fill="#6B1A1A" opacity="0.7"/>
+      <path d="M48 220 L120 36 L192 220 L156 220 L141 178 L99 178 L84 220 Z M111 142 L120 110 L129 142 Z" fill="#FAF6EC" fill-rule="evenodd"/>
+      <rect x="91" y="156" width="58" height="8" fill="#FAF6EC"/>
+      <rect x="42" y="220" width="48" height="6" fill="#FAF6EC"/>
+      <rect x="150" y="220" width="48" height="6" fill="#FAF6EC"/>
+    </symbol>
+  </defs>
+</svg>
 
 <!-- ════════════════════════════════════════════════════════════
      NAVIGATION
@@ -24,8 +46,8 @@
     <div class="nav__inner">
 
       <a href="#" class="nav__logo" aria-label="VamiAudit by VamiSec">
-        <div class="nav__logo-mark" aria-hidden="true">V</div>
-        VamiSec <span class="text-muted" style="font-weight:400">&nbsp;/ VamiAudit</span>
+        <svg width="36" height="36" aria-hidden="true" style="flex-shrink:0"><use href="#va-duo"/></svg>
+        <span class="va-wordmark">Vami<em>Audit</em></span>
       </a>
 
       <ul class="nav__links" id="nav-links">
@@ -854,8 +876,8 @@
 
       <div class="footer__brand">
         <a href="#" class="nav__logo" style="text-decoration:none;" aria-label="VamiAudit home">
-          <div class="nav__logo-mark" aria-hidden="true">V</div>
-          VamiSec <span class="text-muted" style="font-weight:400">&nbsp;/ VamiAudit</span>
+          <svg width="30" height="30" aria-hidden="true" style="flex-shrink:0"><use href="#va-dark"/></svg>
+          <span class="va-wordmark" style="font-size:18px;">Vami<em>Audit</em></span>
         </a>
         <p data-i18n="footer-tagline">Structured compliance workflows for regulated organizations. From controls to audit evidence — continuously.</p>
       </div>
