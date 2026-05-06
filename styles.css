@@ -225,12 +225,12 @@ p { color: var(--text-secondary); }
   left: 0;
   right: 0;
   z-index: 100;
-  background: #6B1A1A;
+  background: #1B8A9E;
   transition: background var(--transition), box-shadow var(--transition);
 }
 
 .nav.scrolled {
-  background: rgba(107,26,26,0.97);
+  background: rgba(27,138,158,0.97);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 2px 0 rgba(0,0,0,0.45);
@@ -259,7 +259,7 @@ p { color: var(--text-secondary); }
   font-size: 22px;
   letter-spacing: -0.02em;
   line-height: 1;
-  color: #FAF6EC;
+  color: #FFFFFF;
   font-variation-settings: "opsz" 144;
 }
 .va-wordmark em {
@@ -280,19 +280,19 @@ p { color: var(--text-secondary); }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(250,246,236,0.7);
+  color: rgba(255,255,255,0.75);
   text-decoration: none;
   transition: color var(--transition);
 }
 
-.nav__links a:hover { color: #FAF6EC; }
+.nav__links a:hover { color: #FFFFFF; }
 
 .lang-toggle {
   display: flex;
   align-items: center;
   gap: 3px;
   background: none;
-  border: 1px solid rgba(250,246,236,0.22);
+  border: 1px solid rgba(255,255,255,0.22);
   border-radius: var(--radius);
   padding: 6px 11px;
   cursor: pointer;
@@ -300,14 +300,14 @@ p { color: var(--text-secondary); }
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: rgba(250,246,236,0.5);
+  color: rgba(255,255,255,0.5);
   transition: border-color var(--transition), color var(--transition);
   white-space: nowrap;
 }
-.lang-toggle:hover { border-color: rgba(250,246,236,0.5); color: rgba(250,246,236,0.85); }
+.lang-toggle:hover { border-color: rgba(255,255,255,0.5); color: rgba(255,255,255,0.85); }
 .lang-toggle__option { transition: color var(--transition); }
-.lang-toggle__option.active { color: #00c4b4; }
-.lang-toggle__sep { color: rgba(250,246,236,0.22); margin: 0 1px; }
+.lang-toggle__option.active { color: #FFFFFF; }
+.lang-toggle__sep { color: rgba(255,255,255,0.22); margin: 0 1px; }
 
 .nav__actions {
   display: flex;
@@ -317,12 +317,12 @@ p { color: var(--text-secondary); }
 
 /* Override btn--outline for oxblood nav */
 .nav .btn--outline {
-  border-color: rgba(250,246,236,0.4);
-  color: #FAF6EC;
+  border-color: rgba(255,255,255,0.4);
+  color: #FFFFFF;
 }
 .nav .btn--outline:hover {
-  background: rgba(250,246,236,0.1);
-  border-color: #FAF6EC;
+  background: rgba(255,255,255,0.1);
+  border-color: #FFFFFF;
 }
 
 /* Mobile nav toggle */
@@ -340,7 +340,7 @@ p { color: var(--text-secondary); }
   display: block;
   width: 22px;
   height: 2px;
-  background: rgba(250,246,236,0.75);
+  background: rgba(255,255,255,0.75);
   border-radius: 2px;
   transition: all var(--transition);
 }
@@ -1366,8 +1366,8 @@ p { color: var(--text-secondary); }
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(107,26,26,0.98);
-    border-bottom: 1px solid rgba(250,246,236,0.12);
+    background: rgba(27,138,158,0.98);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
     padding: 24px;
     gap: 20px;
   }

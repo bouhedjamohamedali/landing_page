@@ -19,21 +19,25 @@
 <!-- VA Mark — SVG symbols used by logo instances throughout the page -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <!-- Cyan: oxblood V (receding layer) + teal A (dominant) — nav on oxblood bg -->
-    <symbol id="va-cyan" viewBox="0 0 240 240">
-      <path d="M22 36 L120 224 L218 36 L182 36 L120 156 L58 36 Z" fill="#4A1010" opacity="0.9"/>
-      <path d="M48 220 L120 36 L192 220 L156 220 L141 178 L99 178 L84 220 Z M111 142 L120 110 L129 142 Z" fill="#00c4b4" fill-rule="evenodd"/>
-      <rect x="91" y="156" width="58" height="8" fill="#00c4b4"/>
-      <rect x="42" y="220" width="48" height="6" fill="#00c4b4"/>
-      <rect x="150" y="220" width="48" height="6" fill="#00c4b4"/>
+    <!-- ALL PAPER on OXBLOOD — V slightly darker teal, A bright white — nav on #1B8A9E bg -->
+    <symbol id="va-on-ox" viewBox="0 0 240 240">
+      <path d="M22 36 L120 224 L218 36 L182 36 L120 156 L58 36 Z"
+            fill="#15768A"/>
+      <path d="M48 220 L120 36 L192 220 L156 220 L141 178 L99 178 L84 220 Z M111 142 L120 110 L129 142 Z"
+            fill="#FFFFFF" fill-rule="evenodd"/>
+      <rect x="91" y="156" width="58" height="8" fill="#FFFFFF"/>
+      <rect x="42" y="220" width="48" height="6" fill="#FFFFFF"/>
+      <rect x="150" y="220" width="48" height="6" fill="#FFFFFF"/>
     </symbol>
-    <!-- On dark: oxblood V layer + teal A — footer on dark background -->
-    <symbol id="va-dark" viewBox="0 0 240 240">
-      <path d="M22 36 L120 224 L218 36 L182 36 L120 156 L58 36 Z" fill="#6B1A1A" opacity="0.6"/>
-      <path d="M48 220 L120 36 L192 220 L156 220 L141 178 L99 178 L84 220 Z M111 142 L120 110 L129 142 Z" fill="#00c4b4" fill-rule="evenodd"/>
-      <rect x="91" y="156" width="58" height="8" fill="#00c4b4"/>
-      <rect x="42" y="220" width="48" height="6" fill="#00c4b4"/>
-      <rect x="150" y="220" width="48" height="6" fill="#00c4b4"/>
+    <!-- PAPER on INK — white A (solid) + white V (outline) — footer on dark background -->
+    <symbol id="va-paper" viewBox="0 0 240 240">
+      <path d="M22 36 L120 224 L218 36 L182 36 L120 156 L58 36 Z"
+            fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" opacity="0.32"/>
+      <path d="M48 220 L120 36 L192 220 L156 220 L141 178 L99 178 L84 220 Z M111 142 L120 110 L129 142 Z"
+            fill="#FFFFFF" fill-rule="evenodd"/>
+      <rect x="91" y="156" width="58" height="8" fill="#FFFFFF"/>
+      <rect x="42" y="220" width="48" height="6" fill="#FFFFFF"/>
+      <rect x="150" y="220" width="48" height="6" fill="#FFFFFF"/>
     </symbol>
   </defs>
 </svg>
@@ -46,7 +50,7 @@
     <div class="nav__inner">
 
       <a href="#" class="nav__logo" aria-label="VamiAudit by VamiSec">
-        <svg width="36" height="36" aria-hidden="true" style="flex-shrink:0"><use href="#va-cyan"/></svg>
+        <svg width="36" height="36" aria-hidden="true" style="flex-shrink:0"><use href="#va-on-ox"/></svg>
         <span class="va-wordmark">Vami<em>Audit</em></span>
       </a>
 
@@ -876,7 +880,7 @@
 
       <div class="footer__brand">
         <a href="#" class="nav__logo" style="text-decoration:none;" aria-label="VamiAudit home">
-          <svg width="30" height="30" aria-hidden="true" style="flex-shrink:0"><use href="#va-dark"/></svg>
+          <svg width="30" height="30" aria-hidden="true" style="flex-shrink:0"><use href="#va-paper"/></svg>
           <span class="va-wordmark" style="font-size:18px;">Vami<em>Audit</em></span>
         </a>
         <p data-i18n="footer-tagline">Structured compliance workflows for regulated organizations. From controls to audit evidence — continuously.</p>
