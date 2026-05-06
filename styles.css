@@ -283,6 +283,28 @@ p { color: var(--text-secondary); }
 
 .nav__links a:hover { color: var(--text-primary); }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 11px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  transition: border-color var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+.lang-toggle:hover { border-color: var(--teal-dim); color: var(--text-secondary); }
+.lang-toggle__option { transition: color var(--transition); }
+.lang-toggle__option.active { color: var(--teal); }
+.lang-toggle__sep { color: var(--border); margin: 0 1px; }
+
 .nav__actions {
   display: flex;
   align-items: center;
