@@ -306,7 +306,7 @@ p { color: var(--text-secondary); }
 }
 .lang-toggle:hover { border-color: rgba(250,246,236,0.5); color: rgba(250,246,236,0.85); }
 .lang-toggle__option { transition: color var(--transition); }
-.lang-toggle__option.active { color: #FAF6EC; }
+.lang-toggle__option.active { color: #00c4b4; }
 .lang-toggle__sep { color: rgba(250,246,236,0.22); margin: 0 1px; }
 
 .nav__actions {
