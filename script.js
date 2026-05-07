@@ -328,6 +328,27 @@ const TRANSLATIONS = {
   }
 };
 
+/* ── Theme switching ─────────────────────────────────────────────────────── */
+(function () {
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('va-theme', theme);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      applyTheme(isLight ? 'dark' : 'light');
+    });
+  });
+})();
+
 /* ── Language switching ─────────────────────────────────────────────────── */
 (function () {
   const saved = localStorage.getItem('va-lang') || 'en';
